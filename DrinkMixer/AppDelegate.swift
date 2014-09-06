@@ -42,7 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
         if url.host == "makefavorite" {
-            DrinkHandler.makeDrink(.HurricanePunch)
+            let getFav = NSUserDefaults.standardUserDefaults().integerForKey("fav")
+            println(getFav)
+            DrinkHandler.makeDrink(MixedDrinkType.fromRaw(getFav)!)
         }
         return true
     }

@@ -10,7 +10,7 @@
 import Foundation
 
 
-enum MixedDrinkType {
+enum MixedDrinkType: Int {
     case OrangeTriangle
     case Screwdriver
     case CranberryKiss
@@ -18,6 +18,8 @@ enum MixedDrinkType {
     case HurricanePunch
     case MarinaPunch
     case MyPleasure
+    
+    static let allValues = [OrangeTriangle, Screwdriver, CranberryKiss, Hurricane, HurricanePunch, MarinaPunch, MyPleasure]
 }
 
 class DrinkHandler {

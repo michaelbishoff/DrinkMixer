@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6vZ-bC-SQl">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
@@ -86,21 +86,6 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="663"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="l8B-Za-D4V">
             <objects>
@@ -113,16 +98,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-hd-Dkx">
-                                <rect key="frame" x="-6" y="402" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-hd-Dkx">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-b1-gPP">
+                                <rect key="frame" x="16" y="293" width="83" height="66"/>
+                                <state key="normal" title="Set Favorite">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setFavorite:" destination="6vZ-bC-SQl" eventType="touchUpInside" id="qbo-nN-Ssv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Favorite: x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83P-xd-HJO">
+                                <rect key="frame" x="16" y="349" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0P-fR-AdW">
+                                <rect key="frame" x="532" y="286" width="52" height="80"/>
+                                <state key="normal" title="Make!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="make:" destination="6vZ-bC-SQl" eventType="touchUpInside" id="mhg-0Y-06s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="ifn-w6-hVB" secondAttribute="bottom" constant="364" id="339-zO-cxB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hQQ-hd-Dkx" secondAttribute="trailing" constant="-16" id="Ize-9x-SKa"/>
+                            <constraint firstItem="CKs-QM-stH" firstAttribute="top" secondItem="hQQ-hd-Dkx" secondAttribute="bottom" id="JYf-vm-8Qa"/>
+                            <constraint firstItem="K0P-fR-AdW" firstAttribute="trailing" secondItem="sYJ-ND-2QA" secondAttribute="trailingMargin" id="PUN-jO-1Qr"/>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="4f1-b1-gPP" secondAttribute="bottom" constant="25" id="S5S-gS-34y"/>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" constant="-16" id="S9e-pD-FTg"/>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="83P-xd-HJO" secondAttribute="bottom" constant="14" id="Stv-Qx-E0V"/>
+                            <constraint firstItem="4f1-b1-gPP" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" id="t3N-tp-tjw"/>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="K0P-fR-AdW" secondAttribute="bottom" constant="18" id="z9j-Eo-mkm"/>
+                            <constraint firstItem="83P-xd-HJO" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" id="zSQ-Pi-UGG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentFavoriteLabel" destination="83P-xd-HJO" id="NWj-00-nxK"/>
+                        <outlet property="picker" destination="hQQ-hd-Dkx" id="WhY-xa-UkZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDK-br-fAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="0.0"/>
+            <point key="canvasLocation" x="0.0" y="11"/>
         </scene>
     </scenes>
 </document>
