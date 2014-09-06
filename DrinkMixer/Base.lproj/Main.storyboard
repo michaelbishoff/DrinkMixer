@@ -100,12 +100,18 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-hd-Dkx">
                                 <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="28" width="400" height="216"/>
+                                </variation>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-b1-gPP">
                                 <rect key="frame" x="16" y="293" width="83" height="66"/>
                                 <state key="normal" title="Set Favorite">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="139" y="398" width="122" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="setFavorite:" destination="6vZ-bC-SQl" eventType="touchUpInside" id="qbo-nN-Ssv"/>
                                 </connections>
@@ -115,12 +121,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="129" y="436" width="142.5" height="20.5"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0P-fR-AdW">
                                 <rect key="frame" x="532" y="286" width="52" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Q52-R4-ZdS"/>
+                                    <constraint firstAttribute="width" constant="137" id="fGr-vD-FVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Make!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q52-R4-ZdS"/>
+                                        <exclude reference="fGr-vD-FVh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="132" y="269" width="137" height="61"/>
+                                    <mask key="constraints">
+                                        <include reference="Q52-R4-ZdS"/>
+                                        <include reference="fGr-vD-FVh"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="make:" destination="6vZ-bC-SQl" eventType="touchUpInside" id="mhg-0Y-06s"/>
                                 </connections>
@@ -128,17 +155,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="ifn-w6-hVB" secondAttribute="bottom" constant="364" id="339-zO-cxB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hQQ-hd-Dkx" secondAttribute="trailing" constant="-16" id="Ize-9x-SKa"/>
-                            <constraint firstItem="CKs-QM-stH" firstAttribute="top" secondItem="hQQ-hd-Dkx" secondAttribute="bottom" id="JYf-vm-8Qa"/>
-                            <constraint firstItem="K0P-fR-AdW" firstAttribute="trailing" secondItem="sYJ-ND-2QA" secondAttribute="trailingMargin" id="PUN-jO-1Qr"/>
-                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="4f1-b1-gPP" secondAttribute="bottom" constant="25" id="S5S-gS-34y"/>
-                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" constant="-16" id="S9e-pD-FTg"/>
-                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="83P-xd-HJO" secondAttribute="bottom" constant="14" id="Stv-Qx-E0V"/>
-                            <constraint firstItem="4f1-b1-gPP" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" id="t3N-tp-tjw"/>
-                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="K0P-fR-AdW" secondAttribute="bottom" constant="18" id="z9j-Eo-mkm"/>
-                            <constraint firstItem="83P-xd-HJO" firstAttribute="leading" secondItem="sYJ-ND-2QA" secondAttribute="leadingMargin" id="zSQ-Pi-UGG"/>
+                            <constraint firstItem="hQQ-hd-Dkx" firstAttribute="top" secondItem="ifn-w6-hVB" secondAttribute="bottom" constant="8" id="1Bn-Ez-aWy"/>
+                            <constraint firstAttribute="centerX" secondItem="hQQ-hd-Dkx" secondAttribute="centerX" id="2J9-T2-c2y"/>
+                            <constraint firstItem="4f1-b1-gPP" firstAttribute="top" secondItem="K0P-fR-AdW" secondAttribute="bottom" constant="68" id="2Qt-jU-Akf"/>
+                            <constraint firstAttribute="centerX" secondItem="83P-xd-HJO" secondAttribute="centerX" constant="-0.25" id="3ln-5x-nAu"/>
+                            <constraint firstAttribute="centerX" secondItem="4f1-b1-gPP" secondAttribute="centerX" id="h6L-Au-7OJ"/>
+                            <constraint firstAttribute="centerX" secondItem="K0P-fR-AdW" secondAttribute="centerX" constant="-0.5" id="kOH-r1-NfK"/>
+                            <constraint firstItem="K0P-fR-AdW" firstAttribute="top" secondItem="hQQ-hd-Dkx" secondAttribute="bottom" constant="25" id="yN4-wn-DT6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Bn-Ez-aWy"/>
+                                <exclude reference="2J9-T2-c2y"/>
+                                <exclude reference="kOH-r1-NfK"/>
+                                <exclude reference="yN4-wn-DT6"/>
+                                <exclude reference="2Qt-jU-Akf"/>
+                                <exclude reference="h6L-Au-7OJ"/>
+                                <exclude reference="3ln-5x-nAu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1Bn-Ez-aWy"/>
+                                <include reference="2J9-T2-c2y"/>
+                                <include reference="kOH-r1-NfK"/>
+                                <include reference="yN4-wn-DT6"/>
+                                <include reference="2Qt-jU-Akf"/>
+                                <include reference="h6L-Au-7OJ"/>
+                                <include reference="3ln-5x-nAu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="currentFavoriteLabel" destination="83P-xd-HJO" id="NWj-00-nxK"/>

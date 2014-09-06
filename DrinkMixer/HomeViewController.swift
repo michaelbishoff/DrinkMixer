@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         picker.delegate = self
         picker.dataSource = self
-
+        updateLabel()
         // Do any additional setup after loading the view.
     }
 
@@ -44,26 +44,9 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         let type: MixedDrinkType = MixedDrinkType.fromRaw(row)!
-        switch type {
-        case .OrangeTriangle:
-            return "Orange Triangle"
-        case .Screwdriver:
-            return "Screwdriver"
-        case .CranberryKiss:
-            return "Cranberry Kiss"
-        case .Hurricane:
-            return "Hurricane"
-        case .HurricanePunch:
-            return "Hurricane Punch"
-        case .MarinaPunch:
-            return "Marina Punch"
-        case .MyPleasure:
-            return "My Pleasure"
-        default:
-            return "¯\\_(ツ)_/¯"
-            
-        }
+        return DrinkHandler.stringForDrink(type)
     }
+    
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 30
@@ -72,7 +55,14 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func setFavorite(sender: UIButton) {
         NSUserDefaults.standardUserDefaults().setInteger(self.picker.selectedRowInComponent(0), forKey: "fav")
         NSUserDefaults.standardUserDefaults().synchronize()
+        updateLabel()
     }
     @IBAction func make(sender: UIButton) {
+        DrinkHandler.makeDrink(MixedDrinkType.fromRaw(self.picker.selectedRowInComponent(0))!)
+    }
+    
+    func updateLabel(){
+        let thing = NSUserDefaults.standardUserDefaults().integerForKey("fav")
+        self.currentFavoriteLabel.text = "Current favorite: \(DrinkHandler.stringForDrink(MixedDrinkType.fromRaw(thing)!))"
     }
 }

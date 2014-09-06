@@ -26,4 +26,25 @@ class DrinkHandler {
     class func makeDrink(drinkType: MixedDrinkType){
         //Make drink ¯\_(ツ)_/¯
     }
+    class func stringForDrink(drink: MixedDrinkType) -> String{
+        switch drink {
+        case .OrangeTriangle:
+            return "Orange Triangle"
+        case .Screwdriver:
+            return "Screwdriver"
+        case .CranberryKiss:
+            return "Cranberry Kiss"
+        case .Hurricane:
+            return "Hurricane"
+        case .HurricanePunch:
+            return "Hurricane Punch"
+        case .MarinaPunch:
+            return "Marina Punch"
+        case .MyPleasure:
+            return "My Pleasure"
+        default:
+            return "¯\\_(ツ)_/¯"
+            
+        }
+    }
 }
