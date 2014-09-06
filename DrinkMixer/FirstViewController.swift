@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
+        Alamofire.request(.GET, "http://httpbin.org/get").responseString { (request, response, string, error) -> Void in
+            println("We got a response: \(string)")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

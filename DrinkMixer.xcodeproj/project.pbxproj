@@ -13,6 +13,7 @@
 		75CDE70519BAD1B600AAA5C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CDE70319BAD1B600AAA5C9 /* Main.storyboard */; };
 		75CDE70719BAD1B600AAA5C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CDE70619BAD1B600AAA5C9 /* Images.xcassets */; };
 		75CDE71319BAD1B600AAA5C9 /* DrinkMixerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDE71219BAD1B600AAA5C9 /* DrinkMixerTests.swift */; };
+		75CDE72519BAD56100AAA5C9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CDE72219BAD54600AAA5C9 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +23,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 75CDE6F719BAD1B600AAA5C9;
 			remoteInfo = DrinkMixer;
+		};
+		75CDE72119BAD54600AAA5C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CDE71C19BAD54600AAA5C9 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		75CDE72319BAD54600AAA5C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CDE71C19BAD54600AAA5C9 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +51,7 @@
 		75CDE70C19BAD1B600AAA5C9 /* DrinkMixerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkMixerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CDE71119BAD1B600AAA5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75CDE71219BAD1B600AAA5C9 /* DrinkMixerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkMixerTests.swift; sourceTree = "<group>"; };
+		75CDE71C19BAD54600AAA5C9 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75CDE72519BAD56100AAA5C9 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +76,7 @@
 		75CDE6EF19BAD1B600AAA5C9 = {
 			isa = PBXGroup;
 			children = (
+				75CDE71C19BAD54600AAA5C9 /* Alamofire.xcodeproj */,
 				75CDE6FA19BAD1B600AAA5C9 /* DrinkMixer */,
 				75CDE70F19BAD1B600AAA5C9 /* DrinkMixerTests */,
 				75CDE6F919BAD1B600AAA5C9 /* Products */,
@@ -110,6 +128,15 @@
 				75CDE71119BAD1B600AAA5C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75CDE71D19BAD54600AAA5C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75CDE72219BAD54600AAA5C9 /* Alamofire.framework */,
+				75CDE72419BAD54600AAA5C9 /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +206,12 @@
 			mainGroup = 75CDE6EF19BAD1B600AAA5C9;
 			productRefGroup = 75CDE6F919BAD1B600AAA5C9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 75CDE71D19BAD54600AAA5C9 /* Products */;
+					ProjectRef = 75CDE71C19BAD54600AAA5C9 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				75CDE6F719BAD1B600AAA5C9 /* DrinkMixer */,
@@ -186,6 +219,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		75CDE72219BAD54600AAA5C9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 75CDE72119BAD54600AAA5C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		75CDE72419BAD54600AAA5C9 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 75CDE72319BAD54600AAA5C9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		75CDE6F619BAD1B600AAA5C9 /* Resources */ = {
@@ -399,6 +449,7 @@
 				75CDE71819BAD1B600AAA5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75CDE71919BAD1B600AAA5C9 /* Build configuration list for PBXNativeTarget "DrinkMixerTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +458,7 @@
 				75CDE71B19BAD1B600AAA5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
