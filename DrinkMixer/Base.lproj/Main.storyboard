@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
@@ -47,6 +48,9 @@
                                 <state key="normal" title="Make It Already!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeItAlreadyPressed:" destination="B1I-sM-wTY" eventType="touchUpInside" id="B4l-rN-YOg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otN-Qy-1fu">
                                 <rect key="frame" x="536" y="550" width="48" height="30"/>
@@ -57,6 +61,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="B1I-sM-wTY" eventType="touchUpInside" id="p2b-g5-cvC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,6 +78,9 @@
                             <constraint firstAttribute="centerX" secondItem="tnw-qt-mxq" secondAttribute="centerX" id="tuS-bN-5Va"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="TVu-WN-ZeL" id="2c6-ds-hnw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBq-W4-eyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +100,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="l8B-Za-D4V">
+            <objects>
+                <viewController id="6vZ-bC-SQl" customClass="HomeViewController" customModule="DrinkMixer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ifn-w6-hVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="CKs-QM-stH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sYJ-ND-2QA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-hd-Dkx">
+                                <rect key="frame" x="-6" y="402" width="600" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDK-br-fAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="0.0"/>
         </scene>
     </scenes>
 </document>
