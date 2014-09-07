@@ -24,7 +24,13 @@ enum MixedDrinkType: Int {
 
 class DrinkHandler {
     class func makeDrink(drinkType: MixedDrinkType){
-        //Make drink ¯\_(ツ)_/¯
+        let manager = AFHTTPRequestOperationManager()
+        let params = ["drink":drinkType.toRaw(),"strong":0]
+        manager.POST("http://mixerpi.local:5001/makeDrink/", parameters: params, success: { (operation, responseObject) -> Void in
+            println("Yay!")
+        }) { (operation, error) -> Void in
+            println("Noooo \(error.code)")
+        }
     }
     class func stringForDrink(drink: MixedDrinkType) -> String{
         switch drink {
